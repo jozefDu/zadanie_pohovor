@@ -7,6 +7,10 @@ use Cake\ORM\Entity;
  * Image Entity
  *
  * @property int $id
+ * @property int $left_position
+ * @property int $top_position
+ * @property int $Šírka
+ * @property int $Výška
  * @property string $photo
  * @property string $photo_dir
  * @property \Cake\I18n\Time $time
@@ -24,7 +28,13 @@ class Image extends Entity
      * @var array
      */
     protected $_accessible = [
-        '*' => true,
-        'id' => false
+        '*' => false,
+        'id' => false,
+	'photo' => true,
+	'photo_dir' => true,
+	'left_position' => true,
+	'top_position' => true,
+	'Šírka' => true,
+	'Výška' => true,
     ];
 }

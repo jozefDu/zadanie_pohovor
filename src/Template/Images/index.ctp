@@ -1,7 +1,7 @@
 <!-- File: src/Template/Images/index.ctp -->
 
 <p><?= $this->Html->link("Add Images", ['action' => 'add']) ?></p>
-<?php echo $this->Form->input('query'); ?>
+<?php echo $this->Form->textarea('textarea', ['rows' => '5', 'cols' => '5']); ?>
 
 <h1>Images</h1>
 <table>

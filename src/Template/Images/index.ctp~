@@ -1,7 +1,8 @@
 <!-- File: src/Template/Images/index.ctp -->
 
 <p><?= $this->Html->link("Add Images", ['action' => 'add']) ?></p>
-<?php echo $this->Form->input('top_position'); ?>
+<?php echo $this->Form->input('query'); ?>
+
 <h1>Images</h1>
 <table>
     <tr>
