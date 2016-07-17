@@ -24,7 +24,7 @@ class ImagesFixture extends TestFixture
         'Výška' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'photo' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         'photo_dir' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
-        'time' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => '', 'precision' => null],
+        'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
@@ -49,7 +49,7 @@ class ImagesFixture extends TestFixture
             'Výška' => 1,
             'photo' => 'Lorem ipsum dolor sit amet',
             'photo_dir' => 'Lorem ipsum dolor sit amet',
-            'time' => 1468494938
+            'created' => '2016-07-17 14:32:52'
         ],
     ];
 }

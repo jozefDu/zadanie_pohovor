@@ -76,9 +76,9 @@ class ImagesTable extends Table
             ->notEmpty('photo_dir');
 
         $validator
-            ->dateTime('time')
-            ->requirePresence('time', 'create')
-            ->notEmpty('time');
+            ->dateTime('created')
+            ->requirePresence('created', 'create')
+            ->notEmpty('created');
 
         return $validator;
     }

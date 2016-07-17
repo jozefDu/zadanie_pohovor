@@ -48,6 +48,26 @@ class ImagesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('left_position')
+            ->requirePresence('left_position', 'create')
+            ->notEmpty('left_position');
+
+        $validator
+            ->integer('top_position')
+            ->requirePresence('top_position', 'create')
+            ->notEmpty('top_position');
+
+        $validator
+            ->integer('Šírka')
+            ->requirePresence('Šírka', 'create')
+            ->notEmpty('Šírka');
+
+        $validator
+            ->integer('Výška')
+            ->requirePresence('Výška', 'create')
+            ->notEmpty('Výška');
+
+        $validator
             ->requirePresence('photo', 'create')
             ->notEmpty('photo');
 
@@ -56,9 +76,9 @@ class ImagesTable extends Table
             ->notEmpty('photo_dir');
 
         $validator
-            ->dateTime('time')
-            ->requirePresence('time', 'create')
-            ->notEmpty('time');
+            ->dateTime('created')
+            ->requirePresence('created', 'create')
+            ->notEmpty('created');
 
         return $validator;
     }

@@ -45,8 +45,8 @@ return [
         'webroot' => 'webroot',
         'wwwRoot' => WWW_ROOT,
         // 'baseUrl' => env('SCRIPT_NAME'),
-        'fullBaseUrl' => false,
-        'imageBaseUrl' => 'img/',
+        'fullBaseUrl' => true,
+        'imageBaseUrl' => ROOT . DS . 'upload/avatar',
         'cssBaseUrl' => 'css/',
         'jsBaseUrl' => 'js/',
         'paths' => [
@@ -64,7 +64,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', '__SALT__'),
+        'salt' => env('SECURITY_SALT', '1d1445c8395adc194e4114234df9be8dfe3952671eda6af1f1264392d1d541a4'),
     ],
 
     /**
@@ -226,9 +226,9 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'my_app',
+            'username' => 'root',
+            'password' => 'root',
+            'database' => 'prvadb',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],

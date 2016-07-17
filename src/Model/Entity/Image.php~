@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property int $Výška
  * @property string $photo
  * @property string $photo_dir
- * @property \Cake\I18n\Time $time
+ * @property \Cake\I18n\Time $created
  */
 class Image extends Entity
 {
@@ -36,5 +36,6 @@ class Image extends Entity
 	'top_position' => true,
 	'Šírka' => true,
 	'Výška' => true,
+	'time' => false,
     ];
 }
