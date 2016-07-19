@@ -21,15 +21,12 @@ class ImageComponent extends Component
             	'bits'   => $info['bits'],
             	'mime'   => $info['mime']
         	);
-        	debug($info[0]);
-		debug($info[1]);
         	$this->image = $this->create($file);
     	
     }
 
     public function create($image) {
 		$mime = $this->info['mime'];
-		debug($mime);
 		if ($mime == 'image/gif') {
 			return imagecreatefromgif($image);
 		} elseif ($mime == 'image/png') {
@@ -100,11 +97,11 @@ class ImageComponent extends Component
                 {
 		$new_width = (int)($this->info['width'] * $scale);
 		$new_height = (int)($this->info['height'] * $scale);			
-    	$xpos = (int)(($width - $new_width) / 2);
+    		$xpos = (int)(($width - $new_width) / 2);
    		$ypos = (int)(($height - $new_height) / 2);
         		        
-       	$image_old = $this->image;
-        $this->image = imagecreatetruecolor($width, $height);
+       		$image_old = $this->image;
+        	$this->image = imagecreatetruecolor($width, $height);
 		
 		if (isset($this->info['mime']) && $this->info['mime'] == 'image/png') {		
 			imagealphablending($this->image, false);
@@ -126,9 +123,9 @@ class ImageComponent extends Component
                 else
                 {
                     
-                    $new_width = (int)($width);
+                $new_width = (int)($width);
 		$new_height = (int)($height);			
-    	$xpos = (int)(($width - $new_width) / 2);
+    		$xpos = (int)(($width - $new_width) / 2);
    		$ypos = (int)(($height - $new_height) / 2);
         		        
        	$image_old = $this->image;
